@@ -77,11 +77,10 @@ jobs:
       with:
         clean: false
     - name: "Benchmark"
-      uses: boa-dev/criterion-compare-action@v3.2.0
+      uses: droogmic/criterion-compare-action@master
       with:
         cwd: "rust"
         benchName: "benchmark_tests"
-        features: "tests"
         branchName: ${{ github.base_ref }}
         token: ${{ secrets.GITHUB_TOKEN }}
   
