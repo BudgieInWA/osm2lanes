@@ -82,7 +82,7 @@ jobs:
         cwd: "rust"
         benchName: "benchmark_tests"
         features: "tests"
-        branchName: "HEAD"
+        branchName: ${{ github.base_ref }}
         token: ${{ secrets.GITHUB_TOKEN }}
   
   rust-stable:
